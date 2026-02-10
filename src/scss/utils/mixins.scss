@@ -1,0 +1,35 @@
+@mixin page-grid {
+  --column: 2;
+  --padd: 20px;
+  display: grid;
+  grid-template-columns: repeat(var(--column), 1fr);
+  padding-inline: var(--padd);
+
+  @include on-tablet {
+    --column: 6;
+    --padd: 40px;
+  }
+
+  @include on-desktop {
+    --column: 12;
+    --padd: 120px;
+  }
+}
+
+@mixin on-tablet {
+  @media (min-width:760px) {
+    @content;
+  }
+}
+
+@mixin on-desktop {
+  @media (min-width:1280px) {
+    @content;
+  }
+}
+
+@mixin off-desktop{
+  @media(max-width:1280px){
+    @content;
+  }
+}
