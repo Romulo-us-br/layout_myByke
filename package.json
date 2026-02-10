@@ -1,0 +1,19 @@
+{
+  "name": "layout_mybyke",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass:watch": "sass --watch src/scss:dist/css",
+    "build": "sass src/scss:dist/css --style compressed && shx cp -r src/images dist/images",
+    "deploy": "npm run build && npx gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "sass": "^1.97.3",
+    "shx": "^0.4.0"
+  }
+}
