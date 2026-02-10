@@ -1,109 +1,24 @@
 @import 'utils/mixins';
+@import 'utils/base';
 
-.header {
-  @include page-grid;
-  background-color: transparent;
-  padding-block: 20px;
-  background-image: url(../image/background/header_back.png);
-  background-position: right;
-  background-size: cover;
-  min-height: 100vh;
-
-  &__menu {
-    grid-column: 1/-1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 5vh;
-
-    &-right {
-      align-items: center;
-      color: white;
-      display: flex;
-      gap: 40px;
-    }
-  }
-
-  &-content {
-    min-height: 95vh;
-    grid-column: 1 / -1;
-    color: white;
-    display: flex;
-    flex-direction: column;
-
-    &-title {
-      margin-top: auto;
-      text-align: center;
-      font-size: 55px;
-      padding-bottom: 88px;
-
-      @include on-tablet {
-        padding-bottom: 130px;
-      }
-
-      @include on-desktop {
-        padding-bottom: 203px;
-      }
-    }
-  }
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.menupage {
-  @include page-grid;
-  padding-block: 28px;
-  background-color: #C2C2C2;
-  color: black;
-  grid-column: 1/-1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  pointer-events: none;
-  z-index: 2;
-  height: 100vh;
-
-  transition: all 0.3 ease;
-  transform: translate(100%);
-
-  &:target {
-    opacity: 1;
-    pointer-events: all;
-    transform: translate(0);
-  }
-
-  &__menu {
-    min-height: 5vh;
-    grid-column: 1/-1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &-content {
-    min-height: 95vh;
+@import 'blocks/move';
+@import 'blocks/header';
+@import 'blocks/compare';
+@import 'blocks/contact';
+@import 'blocks/details';
+@import 'blocks/footer';
+@import 'blocks/menupage';
 
 
-  }
-}
 
-.about {
-  @include page-grid;
-}
 
-.link {
-  text-decoration: none;
-  color: white;
-}
 
-.ondesktop {
-  @include off-desktop {
-    display: none;
-  }
-}
+
+
+
+
+
+
+
+
+

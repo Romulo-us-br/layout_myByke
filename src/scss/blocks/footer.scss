@@ -1,0 +1,15 @@
+.footer {
+  @include page-grid;
+  background-image: url(../image/background/footer-back.png);
+  background-position: center;
+  background-size: cover;
+  min-height: 30vh;
+
+  @include on-tablet {
+    min-height: 40vh;
+  }
+
+  @include on-desktop {
+    min-height: 45vh;
+  }
+}

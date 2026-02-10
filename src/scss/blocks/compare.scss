@@ -1,0 +1,46 @@
+
+.compare {
+  @include page-grid;
+  gap: 40px;
+  padding-block: 32px 60px;
+
+  &-h2title {
+    grid-column: 1/-1;
+    text-align: center;
+    @include h2-style;
+  }
+
+  &-content {
+    grid-column: 1/-1;
+
+    @include on-tablet {
+      grid-column: 2/span 4;
+    }
+
+    @include on-desktop {
+      grid-column: span 4;
+    }
+
+    &-background {
+      padding-bottom: 32px;
+
+      &>img {
+        width: 100%;
+      }
+    }
+
+    &-h3title {
+      @include h3-style;
+    }
+
+    &-desc {
+      @include text-style;
+      padding-block: 8px 16px;
+    }
+
+    &-price {
+      @include h3-style;
+      padding-bottom: 8px;
+    }
+  }
+}

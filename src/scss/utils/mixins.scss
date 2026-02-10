@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: repeat(var(--column), 1fr);
   padding-inline: var(--padd);
+  gap: 24px;
 
   @include on-tablet {
     --column: 6;
@@ -28,8 +29,105 @@
   }
 }
 
-@mixin off-desktop{
-  @media(max-width:1280px){
+@mixin off-desktop {
+  @media(max-width:1280px) {
     @content;
   }
+}
+
+@mixin button-form {
+  border-radius: 40px;
+  background-color: #fff;
+  height: 56px;
+  border: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+@mixin button-style {
+  @include poppin700;
+  color: #1d1d1d;
+  font-size: 16px;
+}
+
+@mixin poppin700 {
+  font-family: 'Poppins';
+  font-weight: 700;
+  color:#fff;
+}
+
+@mixin h1-style {
+  @include poppin700;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: -1.5px;
+
+  @include on-tablet {
+    font-size: 64px;
+  }
+
+  @include on-desktop {
+    font-size: 80px;
+  }
+}
+
+@mixin poppin500 {
+  font-family: 'Poppins';
+  font-weight: 500;
+  color:#fff;
+
+}
+
+@mixin h2-style{
+  @include poppin500;
+  font-size: 32px;
+  letter-spacing: -1.5px;
+  @include on-tablet{
+    font-size:48px;
+  }
+  @include on-desktop{
+    font-size: 64px;
+  }
+}
+
+@mixin text-style{
+  @include poppin500;
+  font-size: 23px;
+  line-height: 140%;
+}
+
+@mixin h3-style{
+  @include poppin700;
+  line-height: 140%;
+  font-size: 24px;
+}
+
+@mixin poppin400{
+  font-family: 'Poppins';
+  font-weight: 400;
+}
+
+@mixin contact-style{
+  @include poppin400;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+@mixin poppin600{
+  font-family: 'Poppins';
+  font-weight: 600;
+}
+@mixin nav-style{
+  @include poppin600;
+  letter-spacing: 2px;
+  font-size: 22px;
+}
+
+@mixin navcont-style{
+  @include poppin600;
+  font-size: 16px;
+  line-height: 27px;
+  text-transform: uppercase;
 }

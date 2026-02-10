@@ -1,0 +1,109 @@
+.menupage {
+  @include page-grid;
+  padding-block: 20px;
+  background-color: #C2C2C2;
+  color: black;
+  grid-column: 1/-1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+  height: 100vh;
+
+  transition: all 0.3 ease;
+  transform: translate(100%);
+
+  &:target {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(0);
+  }
+
+  &__menu {
+    min-height: 5vh;
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-content {
+    min-height: 95vh;
+    grid-column: 1/-1;
+
+    &-nav {
+
+      &-ul {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        list-style: none;
+
+        &-li {
+          &>a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: black;
+            @include nav-style;
+
+          }
+        }
+      }
+
+     
+
+    }
+
+     &-contact {
+        padding-block: 40px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        &-li {
+          &>a {
+            color: black;
+            text-decoration: none;
+            @include navcont-style;
+          }
+        }
+      }
+  }
+}
+
+.link-preto {
+  position: relative;
+
+  &::after {
+    content: "";
+    /* Necessário para o elemento existir */
+    position: absolute;
+    /* Para posicionar livremente em relação ao link */
+    left: 0;
+    bottom: -4px;
+    /* Coloca a linha logo abaixo do texto */
+    width: 100%;
+    /* A linha tem a mesma largura do link */
+    height: 2px;
+    /* Espessura da linha */
+    background-color: black;
+
+    /* Lógica da Animação */
+    transform: scaleX(0);
+    /* Começa com largura 0 (espremido) */
+    transform-origin: left;
+    /* O ponto fixo é a esquerda (ela nasce de lá) */
+    transition: transform 0.3s ease;
+    /* Faz a mudança ser suave, não instantânea */
+  }
+
+  /* 3. Mudando o estado da linha quando o mouse passa no link */
+  &:hover::after {
+    transform: scaleX(1);
+    /* Aumenta a largura para 100% */
+  }
+}

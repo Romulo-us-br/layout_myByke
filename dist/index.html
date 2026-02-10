@@ -9,17 +9,20 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header" id="header">
     <div class="header__menu">
       <div class="header__menu-left">
         <img src="image/icons/logo-branco.png" alt="">
       </div>
       <div class="header__menu-right">
-        <a href="tel:+1 555 555 55" class="link ondesktop">+1 555 555 555</a>
-        <a href="#" class="link">
-          <img src="image/icons/phone-icon.png" alt="">
-        </a>
-        <a href="#menupage">
+        <div class="header__menu-right-phone">
+          <a href="tel:+1 555 555 55" class="link ondesktop">+1 234 5555-55-55</a>
+          <a href="#" class="phone">
+            <img src="image/icons/phone-icon.png" alt="">
+          </a>
+        </div>
+
+        <a href="#menupage" class="menuicon">
           <img src="image/icons/menu-icon.png" alt="">
         </a>
       </div>
@@ -39,13 +42,143 @@
         </div>
       </div>
       <div class="menupage-content">
-        oi
+        <nav class="menupage-content-nav">
+          <ul class="menupage-content-nav-ul">
+            <li class="menupage-content-nav-ul-li">
+              <a href="#header" class="link-preto">Home</a>
+            </li>
+            <li class="menupage-content-nav-ul-li">
+              <a href="#move" class="link-preto">About us</a>
+            </li>
+            <li class="menupage-content-nav-ul-li">
+              <a href="#compare" class="link-preto">Compare Bikes</a>
+            </li>
+            <li class="menupage-content-nav-ul-li">
+              <a href="#details" class="link-preto">Details</a>
+            </li>
+            <li class="menupage-content-nav-ul-li">
+              <a href="#contact" class="link-preto">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="menupage-content-contact">
+          <li class="menupage-content-contact-li">
+            <a href="tel:+1 234 5555-55-55" class="link-preto">+1 234 5555-55-55</a>
+          </li>
+          <li class="menupage-content-contact-li">
+            <a href="#" class="link-preto">Book a test ride</a>
+          </li>
+        </ul>
       </div>
     </div>
   </header>
   <main class="main">
-    <section class="about">abs out</section>
+    <section class="move" id="move">
+      <h2 class="move-h2title">
+        Move Free
+      </h2>
+      <p class="move-desc">
+        Shift your ride, not gears. Find the fastest way to move in the city as the bike adapts intuitively to power the
+        speed you need.
+      </p>
+    </section>
+    <section class="compare" id="compare">
+      <h2 class="compare-h2title">Compare bikes</h2>
+      <div class="compare-content">
+        <div class="compare-content-background">
+          <img src="image/compare/compare01.png" alt="">
+        </div>
+        <h3 class="compare-content-h3title">Sporty 4</h3>
+        <p class="compare-content-desc">The iconic frame brought to a new performance height as a sporty, active ride.
+        </p>
+        <p class="compare-content-price">$ 2 590</p>
+      </div>
+      <div class="compare-content">
+        <div class="compare-content-background">
+          <img src="image/compare/compare01.png" alt="">
+        </div>
+        <h3 class="compare-content-h3title">Sporty 4</h3>
+        <p class="compare-content-desc">The iconic frame brought to a new performance height as a sporty, active ride.
+        </p>
+        <p class="compare-content-price">$ 2 590</p>
+      </div>
+      <div class="compare-content">
+        <div class="compare-content-background">
+          <img src="image/compare/compare01.png" alt="">
+        </div>
+        <h3 class="compare-content-h3title">Sporty 4</h3>
+        <p class="compare-content-desc">The iconic frame brought to a new performance height as a sporty, active ride.
+        </p>
+        <p class="compare-content-price">$ 2 590</p>
+      </div>
+    </section>
+    <section class="details" id="details">
+      <h2 class="details-h2title">
+        The Details
+      </h2>
+      <div class="details-content">
+        <div class="details-content-background">
+          <img src="image/detail/detail01-01.png" alt="">
+          <img src="image/detail/detail01-02.png" alt="">
+        </div>
+        <h3 class="details-content-h3title">Auto Unlock</h3>
+        <p class="details-content-desc">The removable battery has up to 70km battery autonomy and weighs only 2.4 kg.
+          Lights integrated into the frame give you always-on visibility day and night.</p>
+      </div>
+      <div class="details-content">
+        <div class="details-content-background">
+          <img src="image/detail/detail02-01.png" alt="">
+          <img src="image/detail/detail02-02.png" alt="">
+        </div>
+        <h3 class="details-content-h3title">Range & Integrated lights</h3>
+        <p class="details-content-desc">The removable battery has up to 70km battery autonomy and weighs only 2.4 kg.
+          Lights integrated into the frame give you always-on visibility day and night.</p>
+      </div>
+      <div class="details-content">
+        <div class="details-content-background">
+          <img src="image/detail/detail03-01.png" alt="">
+          <img src="image/detail/detail03-02.png" alt="">
+        </div>
+        <h3 class="details-content-h3title">Hydraulic disc brakes & Lightweight</h3>
+        <p class="details-content-desc">Brakes with total stopping power the second you make contact. The removable
+          battery has up to 70km battery autonomy and weighs only 2.4 kg. Lights integrated into the frame give you
+          always-on visibility day and night.</p>
+      </div>
+      <button class="details-button">Explore</button>
+    </section>
+    <section class="contact" id="contact">
+      <h2 class="contact-h2title">
+        Contact Us
+      </h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Nome">
+        <input type="email" placeholder="Email">
+        <textarea name="textarea" placeholder="Message"></textarea>
+        <button class="contact-form-button">Send</button>
+      </form>
+      <div class="contact-content">
+        <div>
+          <p class="contact-content-title">Phone</p>
+          <a href="#" class="link-contact link">+1 234 5555-55-55</a>
+        </div>
+        <div>
+          <p class="contact-content-title">Email</p>
+          <a href="#" class="link-contact link">hello@miami.com</a>
+        </div>
+        <div>
+          <p class="contact-content-title">Address</p>
+          <a href="#" class="link-contact">
+            <p>400 first ave.</p>
+            <p>suite 700</p>
+            <p>Minneapolis, MN 55401</p>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer class="footer" id="footer">
+
+  </footer>
 </body>
 
 </html>

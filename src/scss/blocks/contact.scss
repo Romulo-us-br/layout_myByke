@@ -1,0 +1,63 @@
+.contact {
+  @include page-grid;
+  padding-block: 20px 120px;
+
+  &-h2title {
+    text-align: center;
+    grid-column: 1/-1;
+    @include h2-style;
+  }
+
+  &-form {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include on-tablet {
+      grid-column: span 3;
+    }
+    @include on-desktop{
+      grid-column: span 5;
+    }
+
+    &>input,
+    textarea {
+      height: 48px;
+      padding-inline: 16px;
+      border-radius: 32px;
+      background-color: #f8f8fa;
+      border: none;
+    }
+
+    &>textarea {
+      padding-block: 14px;
+      min-height: 148px;
+    }
+
+    &-button {
+      @include button-form;
+      @include button-style;
+      border: 1px solid black;
+    }
+  }
+  &-content{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    @include on-desktop{
+      grid-column: 8/span 5;
+    }
+    &-title{
+      @include contact-style;
+      color:#fff;
+      padding-bottom: 8px;
+    }
+  }
+}
+.link-contact{
+  text-decoration: none;
+  @include contact-style;
+  font-size: 16px;
+  color:#fff;
+}

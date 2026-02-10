@@ -1,0 +1,44 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  background-color: #1D1D1D;
+}
+
+.link {
+  position: relative;
+  text-decoration: none;
+  color: white; // Ou a cor do seu projeto
+  transition: color 0.3s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px; // Ajuste a distância do texto aqui
+    width: 100%;
+    height: 2px; // Espessura da linha
+    background-color: white; // Cor da linha
+    
+    // ESTADO INICIAL: Encolhido na esquerda
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-out;
+  }
+  &:hover {
+    &::after {
+      // ESTADO HOVER: Expandido
+      transform: scaleX(1);
+    }
+  }
+}
+
+.ondesktop {
+  @include off-desktop {
+    display: none;
+  }
+}

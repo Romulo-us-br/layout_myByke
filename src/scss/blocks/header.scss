@@ -1,0 +1,78 @@
+.header {
+  @include page-grid;
+  background-color: transparent;
+  padding-block: 20px;
+  background-image: url(../image/background/header_back.png);
+  background-position: right;
+  background-size: cover;
+  height: 70vh;
+
+  @include on-tablet {
+    height: 100vh;
+
+  }
+
+
+  &__menu {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+
+    &-right {
+      align-items: center;
+      color: white;
+      display: flex;
+      gap: 40px;
+
+      &-phone {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+
+        &:hover .ondesktop {
+          opacity: 1;
+          pointer-events: all;
+
+
+        }
+      }
+
+    }
+  }
+
+  &-content {
+    grid-column: 1 / -1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+      margin-top: auto;
+      text-align: center;
+      padding-bottom: 88px;
+      @include h1-style;
+
+      @include on-tablet {
+        padding-bottom: 130px;
+      }
+
+      @include on-desktop {
+        padding-bottom: 203px;
+      }
+    }
+  }
+}
+
+
+.ondesktop {
+  line-height: 1; // IMPORTANTE: Remove o respiro extra da fonte
+  pointer-events: none;
+  opacity: 0;
+
+  @include off-desktop {
+    display: none;
+  }
+}

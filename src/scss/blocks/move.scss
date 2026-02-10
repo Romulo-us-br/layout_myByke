@@ -1,0 +1,30 @@
+.move {
+  @include page-grid;
+  padding-block: 60px;
+
+  &-h2title {
+    grid-column: 1/-1;
+    @include h2-style;
+
+    @include on-tablet {
+      grid-column: span 3;
+    }
+
+    @include on-desktop {
+      grid-column: span 5;
+    }
+  }
+
+  &-desc {
+    grid-column: 1/-1;
+    @include text-style;
+
+    @include on-tablet {
+      grid-column: span 3;
+    }
+
+    @include on-desktop {
+      grid-column: span 7;
+    }
+  }
+}
